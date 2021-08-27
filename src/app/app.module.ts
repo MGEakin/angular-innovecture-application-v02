@@ -1,18 +1,71 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { ClientsComponent } from './clients/clients.component';
+import { MessagesComponent } from './messages/messages.component';
+import { PracticesComponent } from './practices/practices.component';
+import { RegionsComponent } from './regions/regions.component';
+import { RolesComponent } from './roles/roles.component';
+import { StatusesComponent } from './statuses/statuses.component';
+import { UsersComponent } from './users/users.component';
+import { OpeningsComponent } from './openings/openings.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { ClientDetailComponent } from './client-detail/client-detail.component';
+import { PracticeDetailComponent } from './practice-detail/practice-detail.component';
+import { RegionDetailComponent } from './region-detail/region-detail.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
+import { StatusDetailComponent } from './status-detail/status-detail.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { OpeningDetailComponent } from './opening-detail/opening-detail.component';
+import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
+import { UserRolesComponent } from './user-roles/user-roles.component';
+import { UserPracticesComponent } from './user-practices/user-practices.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    ClientsComponent,
+    MessagesComponent,
+    PracticesComponent,
+    RegionsComponent,
+    RolesComponent,
+    StatusesComponent,
+    UsersComponent,
+    OpeningsComponent,
+    AssignmentsComponent,
+    ClientDetailComponent,
+    PracticeDetailComponent,
+    RegionDetailComponent,
+    RoleDetailComponent,
+    StatusDetailComponent,
+    UserDetailComponent,
+    OpeningDetailComponent,
+    AssignmentDetailComponent,
+    UserRolesComponent,
+    UserPracticesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
