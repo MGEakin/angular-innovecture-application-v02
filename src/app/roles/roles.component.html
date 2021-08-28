@@ -1,1 +1,8 @@
-<p>roles works!</p>
+<h2>My Roles</h2>
+<ul class="roles">
+  <li *ngFor="let role of roles">
+    <a routerLink="detail/{{role.id}}">
+      <span class="badge">{{role.id}}</span> {{role.name}}
+    </a>
+  </li>
+</ul>

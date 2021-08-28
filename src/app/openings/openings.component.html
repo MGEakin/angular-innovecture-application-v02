@@ -1,1 +1,8 @@
-<p>openings works!</p>
+<h2>My Openings</h2>
+<ul class="openings">
+  <li *ngFor="let opening of openings">
+    <a routerLink="detail/{{opening.id}}">
+      <span class="badge">{{opening.id}}</span> {{opening.name}}
+    </a>
+  </li>
+</ul>

@@ -1,1 +1,8 @@
-<p>statuses works!</p>
+<h2>My Statuses</h2>
+<ul class="statuses">
+  <li *ngFor="let status of statuses">
+    <a routerLink="detail/{{status.id}}">
+      <span class="badge">{{status.id}}</span> {{status.name}}
+    </a>
+  </li>
+</ul>

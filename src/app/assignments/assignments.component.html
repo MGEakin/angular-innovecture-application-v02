@@ -1,1 +1,8 @@
-<p>assignments works!</p>
+<h2>My Assignments</h2>
+<ul class="assignments">
+  <li *ngFor="let assignment of assignments">
+    <a routerLink="detail/{{assignment.id}}">
+      <span class="badge">{{assignment.id}}</span> {{assignment.name}}
+    </a>
+  </li>
+</ul>
