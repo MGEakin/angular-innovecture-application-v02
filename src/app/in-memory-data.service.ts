@@ -49,10 +49,15 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     const userRoles = [
       { userId: 1, roleId: 5 },
+      { userId: 1, roleId: 6 },
       { userId: 2, roleId: 5 },
       { userId: 3, roleId: 6 }
     ];
-    return {clients, practices, regions, roles, statuses, users, userRoles};
+    const userPractices = [
+      { userId: 1, practiceId: 1 },
+      { userId: 2, practiceId: 2 }
+    ];
+    return {clients, practices, regions, roles, statuses, users, userRoles, userPractices};
   }
 
   // Overrides the genId method to ensure that a role always has an id.

@@ -1,1 +1,16 @@
-<p>user-roles works!</p>
+<h2>My UserRoles</h2>
+<ul class="userRoles">
+  <li *ngFor="let userRole of userRoles">
+    <a routerLink="detail/{{userRole.userId}}">
+      <span class="badge">{{userRole.userId}}</span>Role Solo: {{userRole.roleId}}
+    </a>
+  </li>
+</ul>
+<!--<ul class="roles">-->
+<!--  <li *ngFor="let role of roles">-->
+<!--    <a routerLink="detail/{{role.id}}">-->
+<!--      <span class="badge">{{role.id}}</span>Role List: {{role.name}}-->
+<!--    </a>-->
+<!--  </li>-->
+<!--</ul>-->
+

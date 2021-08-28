@@ -21,6 +21,9 @@ import { ClientDetailComponent } from './client-detail/client-detail.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 
+import { UserPracticesComponent } from './user-practices/user-practices.component';
+import { UserRolesComponent } from './user-roles/user-roles.component';
+
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -30,6 +33,11 @@ const routes: Routes = [
   { path: 'regions', component: RegionsComponent },
   { path: 'statuses/detail/:id', component: StatusDetailComponent },
   { path: 'statuses', component: StatusesComponent },
+  { path: 'userPractices', component: UserPracticesComponent },
+  // { path: 'userPractices', component: UserPracticesComponent },
+  { path: 'userRoles/detail/:userId', component: UserRolesComponent },
+  { path: 'userRoles', component: UserRolesComponent },
+  // { path: 'userRoles', component: UserRolesComponent },
   { path: 'users/detail/:id', component: UserDetailComponent },
   { path: 'users', component: UsersComponent },
   { path: 'practices/detail/:id', component: PracticeDetailComponent },

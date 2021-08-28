@@ -1,1 +1,15 @@
-<p>user-practices works!</p>
+<h2>My UserPractices</h2>
+<ul class="userPractices">
+  <li *ngFor="let userPractice of userPractices">
+    <a routerLink="detail/{{userPractice.userId}}">
+      <span class="badge">{{userPractice.userId}}</span>Practice: {{userPractice.practiceId}}
+    </a>
+  </li>
+</ul>
+<ul class="Practices">
+  <li *ngFor="let practice of practices">
+    <a routerLink="detail/{{practice.id}}">
+      <span class="badge">{{practice.id}}</span>Practice: {{practice.name}}
+    </a>
+  </li>
+</ul>
