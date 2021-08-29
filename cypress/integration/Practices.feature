@@ -19,20 +19,20 @@ Feature: Practice CRUD
 
   Scenario: View All Practices
     Given I navigate to the Practice Home Page
-    Then I will see all Practices and their Leads
+    Then I will see all Practices
 
-#  Scenario: View Practice
-#    Given I navigate to the Practice Home Page
-#    When I click on a specific Practice listed
-#    Then I will be on the specific Practice Home Page
-#
+  Scenario: View Practice
+    Given I navigate to the Practice Home Page
+    When I click on a specific Practice listed
+    Then I will be on the specific Practice Home Page
+
 #  Scenario: Update Practice Information
 #    Given I navigate to the Practice Home Page
 #    And I click on a specific Practice listed
 #    And I click the EDIT button
 #    When I change Practice Information and hit submit
 #    Then the Practice is updated
-#
+
 #  Scenario: Remove a Practice
 #    Given I navigate to the Practice Home Page
 #    And I click on a specific Practice listed

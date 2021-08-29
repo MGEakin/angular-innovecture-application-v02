@@ -35,5 +35,8 @@ Then('the Submit button is disabled', () => {
 })
 
 Then('I will see all Practices', () => {
-  cy.get('#btn-submit').should('be.disabled')
+  cy.get('#displaypractices').contains('SDET')
+  cy.get('#displaypractices').contains('Agile')
+  cy.get('#displaypractices').contains('Development')
+  cy.get('#displaypractices').contains('DevOps')
 })

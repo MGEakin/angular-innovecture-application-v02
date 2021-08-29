@@ -3,7 +3,7 @@
 
 <ul class="practices">
   <li *ngFor="let practice of practices">
-    <a routerLink="detail/{{practice.id}}">
+    <a routerLink="detail/{{practice.id}}" id="practice-{{practice.id}}">
       <span class="badge">{{practice.id}}</span> {{practice.name}}
     </a>
   </li>

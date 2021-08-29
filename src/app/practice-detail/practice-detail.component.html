@@ -1,1 +1,8 @@
-<p>practice-detail works!</p>
+<div *ngIf="practice">
+  <h2>{{practice.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{practice.id}}</div>
+  <div>
+    <label for="practice-name">Practice name: </label>
+    <input id="practice-name" [(ngModel)]="practice.name" placeholder="practice name"/><br>
+  </div>
+</div>
