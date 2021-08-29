@@ -1,8 +1,14 @@
 <h2>My Practices</h2>
+<div id="displaypractices">
+
 <ul class="practices">
   <li *ngFor="let practice of practices">
     <a routerLink="detail/{{practice.id}}">
       <span class="badge">{{practice.id}}</span> {{practice.name}}
     </a>
   </li>
+  <li>
+    <a routerLink="/practice/add" id="btn-practice-add">Add Practice</a>
+  </li>
 </ul>
+</div>

@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { PracticesComponent } from './practices/practices.component';
 import { PracticeDetailComponent } from './practice-detail/practice-detail.component';
+import { PracticeAddFormComponent } from './practice-add-form/practice-add-form.component';
 
 import { RolesComponent } from './roles/roles.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
@@ -40,8 +41,9 @@ const routes: Routes = [
   // { path: 'userRoles', component: UserRolesComponent },
   { path: 'users/detail/:id', component: UserDetailComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'practices/detail/:id', component: PracticeDetailComponent },
   { path: 'practices', component: PracticesComponent },
+  { path: 'practices/detail/:id', component: PracticeDetailComponent },
+  { path: 'practice/add', component: PracticeAddFormComponent },
   { path: 'clients/detail/:id', component: ClientDetailComponent },
   { path: 'clients', component: ClientsComponent }
 ];

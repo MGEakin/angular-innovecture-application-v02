@@ -1,4 +1,6 @@
-export interface Practice {
-  id: number;
-  name: string;
+export class Practice {
+  constructor(
+    public id: number,
+    public name: string
+  ) { }
 }

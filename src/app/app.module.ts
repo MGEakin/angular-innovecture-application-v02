@@ -28,6 +28,14 @@ import { OpeningDetailComponent } from './opening-detail/opening-detail.componen
 import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
 import { UserRolesComponent } from './user-roles/user-roles.component';
 import { UserPracticesComponent } from './user-practices/user-practices.component';
+import { ClientAddFormComponent } from './client-add-form/client-add-form.component';
+import { PracticeAddFormComponent } from './practice-add-form/practice-add-form.component';
+import { RegionAddFormComponent } from './region-add-form/region-add-form.component';
+import { RoleAddFormComponent } from './role-add-form/role-add-form.component';
+import { StatusAddFormComponent } from './status-add-form/status-add-form.component';
+import { UserAddFormComponent } from './user-add-form/user-add-form.component';
+import { OpeningAddFormComponent } from './opening-add-form/opening-add-form.component';
+import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +59,15 @@ import { UserPracticesComponent } from './user-practices/user-practices.componen
     OpeningDetailComponent,
     AssignmentDetailComponent,
     UserRolesComponent,
-    UserPracticesComponent
+    UserPracticesComponent,
+    ClientAddFormComponent,
+    PracticeAddFormComponent,
+    RegionAddFormComponent,
+    RoleAddFormComponent,
+    StatusAddFormComponent,
+    UserAddFormComponent,
+    OpeningAddFormComponent,
+    AssignmentAddFormComponent
   ],
   imports: [
     BrowserModule,
