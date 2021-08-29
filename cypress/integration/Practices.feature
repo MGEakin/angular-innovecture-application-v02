@@ -9,19 +9,18 @@ Feature: Practice CRUD
 
   Scenario: add new Practice
     Given I navigate to the Create Practice page
-    When I enter all the Practice information
+    When I enter all the Practice information and hit submit
     Then the Practice is created
 
-#  Scenario: View All Practices
-#    Given I navigate to the Practice Home Page
-#    Then I will see all Practices and their Leads
-#
-#  Scenario: required field - Practice Name
-#    Given I navigate to the Create Practice page
-#    When I do not enter the Practice Name field and hit submit
-#    Then an error message is displayed
-#    And the Practice is not created
-#
+  Scenario: required field - Practice Name
+    Given I navigate to the Create Practice page
+    When I do not enter the Practice Name field
+    Then the Submit button is disabled
+
+  Scenario: View All Practices
+    Given I navigate to the Practice Home Page
+    Then I will see all Practices and their Leads
+
 #  Scenario: View Practice
 #    Given I navigate to the Practice Home Page
 #    When I click on a specific Practice listed
