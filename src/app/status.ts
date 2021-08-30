@@ -1,4 +1,6 @@
-export interface Status {
-  id: number;
-  name: string;
+export class Status {
+  constructor(
+    public id: number,
+    public name: string
+  ) { }
 }

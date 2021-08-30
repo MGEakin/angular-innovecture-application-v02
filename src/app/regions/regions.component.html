@@ -1,8 +1,12 @@
 <h2>My Regions</h2>
+<div id="displayregions">
 <ul class="regions">
   <li *ngFor="let region of regions">
-    <a routerLink="detail/{{region.id}}">
+    <a routerLink="detail/{{region.id}}" id="region-{{region.id}}">>
       <span class="badge">{{region.id}}</span> {{region.name}}
     </a>
   </li>
-</ul>
+  <li>
+    <a routerLink="/region/add" id="btn-region-add">Add Region</a>
+  </li></ul>
+</div>

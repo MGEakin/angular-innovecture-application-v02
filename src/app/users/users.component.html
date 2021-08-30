@@ -1,8 +1,13 @@
 <h2>My Users</h2>
+<div id="displayusers">
 <ul class="users">
   <li *ngFor="let user of users">
-    <a routerLink="detail/{{user.id}}">
+    <a routerLink="detail/{{user.id}}" id="user-{{user.id}}">>
       <span class="badge">{{user.id}}</span> {{user.name}}
     </a>
   </li>
+  <li>
+    <a routerLink="/user/add" id="btn-user-add">Add User</a>
+  </li>
 </ul>
+</div>

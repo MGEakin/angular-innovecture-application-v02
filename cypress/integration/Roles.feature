@@ -9,32 +9,32 @@ Feature: Role CRUD
 
   Scenario: add new Role
     Given I navigate to the Create "Role" page
-    When I enter all the Role information and hit submit
-    Then the Role is created
+    When I "enter" all the "Role" information and hit submit
+    Then the "Role" is created
 
   Scenario: required field - Role Name
     Given I navigate to the Create "Role" page
-    When I do not enter the Role Name field
+    When I "do not enter" all the "Role" information and hit submit
     Then the Submit button is disabled
 
   Scenario: View All Roles
     Given I navigate to the "Role" Home page
-    Then I will see all Roles
+    Then I will see all "Roles"
 
   Scenario: View Role
     Given I navigate to the "Role" Home page
-    When I click on a specific Role
-    Then I will be on the specific Role Home page
+    When I click on a specific "Role"
+    Then I will be on the specific "Role" Home page
 
-#  Scenario: Update Role Information
-#    Given I navigate to the "Role" Home page
-#    And I click on a specific Role listed
+  Scenario: Update Role Information
+    Given I navigate to the "Role" Home page
+    When I click on a specific "Role"
 #    And I click the EDIT button
 #    When I change Role Information and hit submit
 #    Then the Role is updated
 
-#  Scenario: Remove a Role
-#    Given I navigate to the "Role" Home page
-#    And I click on a specific Role listed
+  Scenario: Remove a Role
+    Given I navigate to the "Role" Home page
+    When I click on a specific "Role"
 #    When I click on the REMOVE Role button
 #    Then the Role is no longer visible

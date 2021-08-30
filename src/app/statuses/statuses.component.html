@@ -1,8 +1,12 @@
 <h2>My Statuses</h2>
+<div id="displaystatuses">
 <ul class="statuses">
   <li *ngFor="let status of statuses">
-    <a routerLink="detail/{{status.id}}">
+    <a routerLink="detail/{{status.id}}" id="status-{{status.id}}">>
       <span class="badge">{{status.id}}</span> {{status.name}}
     </a>
   </li>
-</ul>
+  <li>
+    <a routerLink="/status/add" id="btn-status-add">Add Status</a>
+  </li></ul>
+</div>

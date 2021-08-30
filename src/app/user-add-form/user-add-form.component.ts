@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {User} from '../user';
 
 @Component({
   selector: 'app-user-add-form',
   templateUrl: './user-add-form.component.html',
   styleUrls: ['./user-add-form.component.css']
 })
-export class UserAddFormComponent implements OnInit {
+export class UserAddFormComponent {
 
-  constructor() { }
+  powers = ['Really Smart', 'Super Flexible',
+    'Super Hot', 'Weather Changer'];
 
-  ngOnInit(): void {
+  model = new User(10, '');
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
+
+  newUser() {
+    this.model = new User(42, '');
   }
-
 }

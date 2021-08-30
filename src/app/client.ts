@@ -1,4 +1,6 @@
-export interface Client {
-  id: number;
-  name: string;
+export class Client {
+  constructor(
+    public id: number,
+    public name: string
+  ) { }
 }

@@ -1,1 +1,31 @@
-<p>region-add-form works!</p>
+<div class="container" id="add-new-region">
+  <div [hidden]="submitted">
+    <h1>Add Region Form</h1>
+    <form (ngSubmit)="onSubmit()" #regionForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" id="btn-submit" [disabled]="!regionForm.form.valid">Submit</button>
+      <!--      <button type="button" class="btn btn-default" (click)="newRegion(); regionForm.reset()">New Region</button>-->
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" id="display-new-region">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9">{{ model.name }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>

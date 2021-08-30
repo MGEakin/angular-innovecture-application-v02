@@ -1,1 +1,8 @@
-<p>role-detail works!</p>
+<div *ngIf="role" id="role-{{role.id}}-home">
+  <h2>{{role.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{role.id}}</div>
+  <div>
+    <label for="role-name">Role name: </label>
+    <input id="role-name" [(ngModel)]="role.name" placeholder="role name"/><br>
+  </div>
+</div>

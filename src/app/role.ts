@@ -1,5 +1,7 @@
-export interface Role {
-  id: number;
-  name: string;
-  jd: string;
+export class Role {
+  constructor(
+    public id: number,
+    public name: string,
+    public jd: string
+  ) { }
 }

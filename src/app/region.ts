@@ -1,4 +1,6 @@
-export interface Region {
-  id: number;
-  name: string;
+export class Region {
+  constructor(
+    public id: number,
+    public name: string
+  ) { }
 }

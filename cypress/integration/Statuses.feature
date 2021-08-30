@@ -9,32 +9,32 @@ Feature: Status CRUD
 
   Scenario: add new Status
     Given I navigate to the Create "Status" page
-    When I enter all the Status information and hit submit
-    Then the Status is created
+    When I "enter" all the "Status" information and hit submit
+    Then the "Status" is created
 
   Scenario: required field - Status Name
     Given I navigate to the Create "Status" page
-    When I do not enter the Status Name field
+    When I "do not enter" all the "Status" information and hit submit
     Then the Submit button is disabled
 
   Scenario: View All Statuses
     Given I navigate to the "Status" Home page
-    Then I will see all Statuses
+    Then I will see all "Statuses"
 
   Scenario: View Status
     Given I navigate to the "Status" Home page
-    When I click on a specific Status
-    Then I will be on the specific Status Home page
+    When I click on a specific "Status"
+    Then I will be on the specific "Status" Home page
 
-#  Scenario: Update Status Information
-#    Given I navigate to the "Status" Home page
-#    And I click on a specific Status listed
+  Scenario: Update Status Information
+    Given I navigate to the "Status" Home page
+    When I click on a specific "Status"
 #    And I click the EDIT button
 #    When I change Status Information and hit submit
 #    Then the Status is updated
 
-#  Scenario: Remove a Status
-#    Given I navigate to the "Status" Home page
-#    And I click on a specific Status listed
+  Scenario: Remove a Status
+    Given I navigate to the "Status" Home page
+    When I click on a specific "Status"
 #    When I click on the REMOVE Status button
 #    Then the Status is no longer visible

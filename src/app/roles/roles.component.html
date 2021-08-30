@@ -1,8 +1,12 @@
 <h2>My Roles</h2>
+<div id="displayroles">
 <ul class="roles">
   <li *ngFor="let role of roles">
-    <a routerLink="detail/{{role.id}}">
+    <a routerLink="detail/{{role.id}}" id="role-{{role.id}}">>
       <span class="badge">{{role.id}}</span> {{role.name}}
     </a>
   </li>
-</ul>
+  <li>
+    <a routerLink="/role/add" id="btn-role-add">Add Role</a>
+  </li></ul>
+</div>

@@ -1,1 +1,8 @@
-<p>status-detail works!</p>
+<div *ngIf="status" id="status-{{status.id}}-home">
+  <h2>{{status.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{status.id}}</div>
+  <div>
+    <label for="status-name">Status name: </label>
+    <input id="status-name" [(ngModel)]="status.name" placeholder="status name"/><br>
+  </div>
+</div>

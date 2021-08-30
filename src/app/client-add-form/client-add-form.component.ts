@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Client} from '../client';
 
 @Component({
   selector: 'app-client-add-form',
   templateUrl: './client-add-form.component.html',
   styleUrls: ['./client-add-form.component.css']
 })
-export class ClientAddFormComponent implements OnInit {
+export class ClientAddFormComponent {
 
-  constructor() { }
+  powers = ['Really Smart', 'Super Flexible',
+    'Super Hot', 'Weather Changer'];
 
-  ngOnInit(): void {
+  model = new Client(10, '');
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
+
+  newClient() {
+    this.model = new Client(42, '');
   }
-
 }

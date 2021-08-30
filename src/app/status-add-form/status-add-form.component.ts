@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Status} from '../status';
 
 @Component({
   selector: 'app-status-add-form',
   templateUrl: './status-add-form.component.html',
   styleUrls: ['./status-add-form.component.css']
 })
-export class StatusAddFormComponent implements OnInit {
+export class StatusAddFormComponent {
 
-  constructor() { }
+  powers = ['Really Smart', 'Super Flexible',
+    'Super Hot', 'Weather Changer'];
 
-  ngOnInit(): void {
+  model = new Status(10, '');
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
+
+  newStatus() {
+    this.model = new Status(42, '');
   }
-
 }

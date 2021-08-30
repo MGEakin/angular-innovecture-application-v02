@@ -1,1 +1,8 @@
-<p>region-detail works!</p>
+<div *ngIf="region" id="region-{{region.id}}-home">
+  <h2>{{region.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{region.id}}</div>
+  <div>
+    <label for="region-name">Region name: </label>
+    <input id="region-name" [(ngModel)]="region.name" placeholder="region name"/><br>
+  </div>
+</div>

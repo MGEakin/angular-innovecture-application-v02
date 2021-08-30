@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Practice} from '../practice';
-// import { Practice } from '../practice';
 
 @Component({
   selector: 'app-practice-add-form',

@@ -1,8 +1,12 @@
 <h2>My Clients</h2>
+<div id="displayclients">
 <ul class="clients">
   <li *ngFor="let client of clients">
-    <a routerLink="detail/{{client.id}}">
+    <a routerLink="detail/{{client.id}}" id="client-{{client.id}}">>
       <span class="badge">{{client.id}}</span> {{client.name}}
     </a>
   </li>
-</ul>
+  <li>
+    <a routerLink="/client/add" id="btn-client-add">Add Client</a>
+  </li></ul>
+</div>
