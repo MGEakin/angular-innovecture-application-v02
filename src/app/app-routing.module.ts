@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientDetailComponent } from './client-detail/client-detail.component';
 import { ClientAddFormComponent } from './client-add-form/client-add-form.component';
+import { ClientRegionsComponent } from './client-regions/client-regions.component';
 
 import { PracticesComponent } from './practices/practices.component';
 import { PracticeDetailComponent } from './practice-detail/practice-detail.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'clients', component: ClientsComponent },
   { path: 'clients/detail/:id', component: ClientDetailComponent },
   { path: 'client/add', component: ClientAddFormComponent },
+  { path: 'clientRegions', component: ClientRegionsComponent },
 
   { path: 'practices', component: PracticesComponent },
   { path: 'practices/detail/:id', component: PracticeDetailComponent },

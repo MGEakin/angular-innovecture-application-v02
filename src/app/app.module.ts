@@ -38,7 +38,7 @@ import { OpeningAddFormComponent } from './opening-add-form/opening-add-form.com
 import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add-form.component';
 import { PracticeUsersComponent } from './practice-users/practice-users.component';
 import { RolePracticesComponent } from './role-practices/role-practices.component';
-import { ClientRegionComponent } from './client-region/client-region.component';
+import { ClientRegionsComponent } from './client-regions/client-regions.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +73,7 @@ import { ClientRegionComponent } from './client-region/client-region.component';
     AssignmentAddFormComponent,
     PracticeUsersComponent,
     RolePracticesComponent,
-    ClientRegionComponent
+    ClientRegionsComponent
   ],
   imports: [
     BrowserModule,

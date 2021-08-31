@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClientRegionComponent } from './client-region.component';
+import { ClientRegionComponent } from './client-regions.component';
 
 describe('ClientRegionComponent', () => {
   let component: ClientRegionComponent;

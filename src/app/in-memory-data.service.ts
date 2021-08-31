@@ -28,6 +28,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 2, name: 'APAC' },
       { id: 3, name: 'Europe' }
     ];
+    const clientRegions = [
+      { clientId: 1, regionId: 3 },
+      { clientId: 2, regionId: 1 },
+      { clientId: 3, regionId: 1 }
+    ];
     const roles = [
       { id: 1, name: 'SDET Engineer', jd: 'SDET Engineer JD here' },
       { id: 2, name: 'Sr SDET Engineer', jd: 'Sr SDET Engineer JD here' },
@@ -59,7 +64,20 @@ export class InMemoryDataService implements InMemoryDbService {
       { userId: 2, practiceId: 2 },
       { userId: 4, practiceId: 2 }
     ];
-    return {clients, practices, regions, roles, statuses, users, userRoles, userPractices};
+    const opening = [
+      { id: 1, title: 'MMC Agile Coach - Mercer', role: 3, openDate: '07/02/2022', closeDate: '09/30/2021', rate: 55 },
+      { id: 2, title: 'MMC Agile Coach - OWG', role: 3, openDate: '08/02/2022', closeDate: '09/30/2021', rate: 55 },
+      { id: 3, title: 'MMC ScrumMaster - Mercer', role: 4, openDate: '08/12/2022', closeDate: '09/30/2021', rate: 45 },
+      { id: 4, title: 'MMC SDET - Mercer', role: 1, openDate: '08/22/2022', closeDate: '09/30/2021', rate: 35 }
+    ];
+    const assignment = [
+      { id: 1, title: 'MMC Agile Coach - Mercer', role: 3, startDate: '07/02/2022', closeDate: '09/30/2021', rate: 55 },
+      { id: 2, title: 'MMC Agile Coach - OWG', role: 3, startDate: '08/02/2022', closeDate: '09/30/2021', rate: 55 },
+      { id: 3, title: 'MMC ScrumMaster - Mercer', role: 4, startDate: '08/12/2022', closeDate: '09/30/2021', rate: 45 },
+      { id: 4, title: 'MMC SDET - Mercer', role: 1, startDate: '08/22/2022', closeDate: '09/30/2021', rate: 35 }
+    ];
+    return {clients, clientRegions, practices, regions, roles, statuses, users, userRoles, userPractices,
+      opening, assignment};
   }
 
   // Overrides the genId method to ensure that a role always has an id.
