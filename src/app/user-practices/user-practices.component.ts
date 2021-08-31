@@ -27,6 +27,7 @@ export class UserPracticesComponent implements OnInit {
 
   ngOnInit() {
     this.getUserPractices();
+    // this.getPracticeUsers();
     this.getPractices();
   };
 
@@ -34,8 +35,13 @@ export class UserPracticesComponent implements OnInit {
     const userId = Number(this.route.snapshot.paramMap.get('id'));
     this.userPracticeService.getUserPractices(userId)
       .subscribe(userPractices => this.userPractices = userPractices);
-    // this.log(`got userPractices with userPractices.length=${this.userPractices.length}`)
   }
+
+  // getPracticeUsers(): void {
+  //   const practiceId = Number(this.route.snapshot.paramMap.get('id'));
+  //   this.userPracticeService.getPracticeUsers(practiceId)
+  //     .subscribe(userPractices => this.userPractices = userPractices);
+  // }
 
   getPractices(): void {
     this.log(`into getPractices with userPractices.length=${this.userPractices.length}`)
@@ -52,4 +58,5 @@ export class UserPracticesComponent implements OnInit {
   /** Log a UserPracticesComponent message with the MessageService */
   private log(message: string) {
     this.messageService.add(`UserPracticesComponent: ${message}`);
-  }}
+  }
+}

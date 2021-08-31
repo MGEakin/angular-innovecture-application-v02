@@ -24,6 +24,8 @@ When('I {string} all the {string} information and hit submit', (enter, entity) =
         break;
       case 'User':
         cy.get('#name').type('Marc Cruz')
+        cy.get('#practice').select('Agile')
+        cy.get('#role').select('Agile Coach')
         break;
       default:
         cy.get('#name').type('')

@@ -1,0 +1,15 @@
+<h2>Users in the Practice</h2>
+<ul class="userPractices">
+  <li *ngFor="let userPractice of userPractices">
+    <a routerLink="detail/{{userPractice.userId}}">
+      <span class="badge">{{userPractice.userId}}</span>User: {{userPractice.userId}}
+    </a>
+  </li>
+</ul>
+<ul class="Users">
+  <li *ngFor="let user of users">
+    <a routerLink="detail/{{user.id}}">
+      <span class="badge">{{user.id}}</span>User: {{user.name}}
+    </a>
+  </li>
+</ul>

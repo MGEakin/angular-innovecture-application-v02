@@ -1,6 +1,6 @@
-<div class="container" id="add-new-user">
+<div class="container">
   <div [hidden]="submitted">
-    <h1>Add User Form</h1>
+    <h1>New User Form</h1>
     <form (ngSubmit)="onSubmit()" #userForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
@@ -14,16 +14,50 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" id="btn-submit" [disabled]="!userForm.form.valid">Submit</button>
-      <!--      <button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">New User</button>-->
+      <div class="form-group">
+        <label for="role">User Role</label>
+        <select class="form-control" id="role"
+                required
+                [(ngModel)]="model.role" name="role"
+                #role="ngModel">
+          <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+        </select>
+        <div [hidden]="role.valid || role.pristine" class="alert alert-danger">
+          Role is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="practice">User Practice</label>
+        <select class="form-control" id="practice"
+                required
+                [(ngModel)]="model.practice" name="practice"
+                #practice="ngModel">
+          <option *ngFor="let practice of practices" [value]="practice">{{practice}}</option>
+        </select>
+        <div [hidden]="practice.valid || practice.pristine" class="alert alert-danger">
+          Practice is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">New User</button>
     </form>
   </div>
 
-  <div [hidden]="!submitted" id="display-new-user">
+  <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <div class="row">
       <div class="col-xs-3">Name</div>
       <div class="col-xs-9">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Role</div>
+      <div class="col-xs-9">{{ model.role }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Practice</div>
+      <div class="col-xs-9">{{ model.practice }}</div>
     </div>
     <br>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>

@@ -21,13 +21,23 @@ export class UserPracticeService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** GET userPractices from the server */
+  /** GET Practices User belongs to from the server */
   getUserPractices(userId: number): Observable<UserPractice[]> {
     const url = `${this.userPracticesUrl}/?userId=${userId}`;
     return this.http.get<UserPractice[]>(url)
       .pipe(
         tap(_ => this.log(`fetched userPractices`)),
         catchError(this.handleError<UserPractice[]>('getUserPractices', []))
+      );
+  }
+
+  /** GET Users which belong to a Practices from the server */
+  getPracticeUsers(practiceId: number): Observable<UserPractice[]> {
+    const url = `${this.userPracticesUrl}/?practiceId=${practiceId}`;
+    return this.http.get<UserPractice[]>(url)
+      .pipe(
+        tap(_ => this.log(`fetched practiceUsers`)),
+        catchError(this.handleError<UserPractice[]>('getPracticeUsers', []))
       );
   }
 

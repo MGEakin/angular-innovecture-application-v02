@@ -10,6 +10,7 @@ import { ClientAddFormComponent } from './client-add-form/client-add-form.compon
 import { PracticesComponent } from './practices/practices.component';
 import { PracticeDetailComponent } from './practice-detail/practice-detail.component';
 import { PracticeAddFormComponent } from './practice-add-form/practice-add-form.component';
+import { PracticeUsersComponent } from './practice-users/practice-users.component';
 
 import { RegionsComponent } from './regions/regions.component';
 import { RegionDetailComponent } from './region-detail/region-detail.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'practices', component: PracticesComponent },
   { path: 'practices/detail/:id', component: PracticeDetailComponent },
   { path: 'practice/add', component: PracticeAddFormComponent },
+  { path: 'practiceUsers', component: PracticeUsersComponent },
 
   { path: 'regions', component: RegionsComponent },
   { path: 'regions/detail/:id', component: RegionDetailComponent },

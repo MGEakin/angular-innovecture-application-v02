@@ -31,8 +31,8 @@ export class InMemoryDataService implements InMemoryDbService {
     const roles = [
       { id: 1, name: 'SDET Engineer', jd: 'SDET Engineer JD here' },
       { id: 2, name: 'Sr SDET Engineer', jd: 'Sr SDET Engineer JD here' },
-      { id: 3, name: 'SDET Architect', jd: 'SDET Architect JD here' },
-      { id: 4, name: 'Sr SDET Architect', jd: 'Sr SDET Architect JD here' },
+      { id: 3, name: 'Agile Coach', jd: 'Agile Coach' },
+      { id: 4, name: 'ScrumMaster', jd: 'ScrumMaster' },
       { id: 5, name: 'Practice Lead', jd: '' },
       { id: 6, name: 'Account Manager', jd: '' }
     ];
@@ -45,7 +45,8 @@ export class InMemoryDataService implements InMemoryDbService {
     const users = [
       { id: 1, name: 'Matthew Eakin' },
       { id: 2, name: 'Jack Warner' },
-      { id: 3, name: 'Tim Loree' }
+      { id: 3, name: 'Tim Loree' },
+      { id: 4, name: 'Mark Cruz' }
     ];
     const userRoles = [
       { userId: 1, roleId: 5 },
@@ -55,7 +56,8 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     const userPractices = [
       { userId: 1, practiceId: 1 },
-      { userId: 2, practiceId: 2 }
+      { userId: 2, practiceId: 2 },
+      { userId: 4, practiceId: 2 }
     ];
     return {clients, practices, regions, roles, statuses, users, userRoles, userPractices};
   }

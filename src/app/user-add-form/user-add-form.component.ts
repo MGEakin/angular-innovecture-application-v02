@@ -8,16 +8,19 @@ import {User} from '../user';
 })
 export class UserAddFormComponent {
 
-  powers = ['Really Smart', 'Super Flexible',
-    'Super Hot', 'Weather Changer'];
+  roles = ['SDET Engineer', 'Sr SDET Engineer', 'Agile Coach',
+    'ScrumMaster', 'Practice Lead', 'Account Manager'];
 
-  model = new User(10, '');
+  practices = ['SDET', 'Agile', 'Development', 'DevOps' ];
+
+  model = new User(42, '', '', '');
+  // model = new User(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newUser() {
-    this.model = new User(42, '');
+    this.model = new User(42, '', '');
   }
 }

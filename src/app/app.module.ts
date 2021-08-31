@@ -36,6 +36,9 @@ import { StatusAddFormComponent } from './status-add-form/status-add-form.compon
 import { UserAddFormComponent } from './user-add-form/user-add-form.component';
 import { OpeningAddFormComponent } from './opening-add-form/opening-add-form.component';
 import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add-form.component';
+import { PracticeUsersComponent } from './practice-users/practice-users.component';
+import { RolePracticesComponent } from './role-practices/role-practices.component';
+import { ClientRegionComponent } from './client-region/client-region.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,10 @@ import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add
     StatusAddFormComponent,
     UserAddFormComponent,
     OpeningAddFormComponent,
-    AssignmentAddFormComponent
+    AssignmentAddFormComponent,
+    PracticeUsersComponent,
+    RolePracticesComponent,
+    ClientRegionComponent
   ],
   imports: [
     BrowserModule,
