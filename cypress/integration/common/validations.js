@@ -70,8 +70,8 @@ Then('I will see all {string}', (entity) => {
     case 'Roles':
       cy.get('#displayroles').contains('SDET Engineer')
       cy.get('#displayroles').contains('Sr SDET Engineer')
-      cy.get('#displayroles').contains('SDET Architect')
-      cy.get('#displayroles').contains('Sr SDET Architect')
+      cy.get('#displayroles').contains('Agile Coach')
+      cy.get('#displayroles').contains('ScrumMaster')
       cy.get('#displayroles').contains('Practice Lead')
       cy.get('#displayroles').contains('Account Manager')
       break;
@@ -107,3 +107,9 @@ Then( 'I will be on the specific {string} Home page', (entity) => {
   }
   // cy.get(`#${entity.toLowerCase()}-1-home`).click()
 })
+
+Then( 'I see the Region they belong in', () => {
+  cy.get('#client-region').contains('Region: 3')
+
+})
+

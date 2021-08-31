@@ -40,23 +40,23 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">New User</button>
+      <button type="submit" id="btn-submit" class="btn btn-success" [disabled]="!userForm.form.valid">Submit</button>
+      <button type="button" id="btn-user-add" class="btn btn-default" (click)="newUser(); userForm.reset()">New User</button>
     </form>
   </div>
 
-  <div [hidden]="!submitted">
+  <div [hidden]="!submitted" id="display-new-user">
     <h2>You submitted the following:</h2>
     <div class="row">
-      <div class="col-xs-3">Name</div>
+      <div class="col-xs-3">Name:</div>
       <div class="col-xs-9">{{ model.name }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Role</div>
+      <div class="col-xs-3">Role:</div>
       <div class="col-xs-9">{{ model.role }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Practice</div>
+      <div class="col-xs-3">Practice:</div>
       <div class="col-xs-9">{{ model.practice }}</div>
     </div>
     <br>

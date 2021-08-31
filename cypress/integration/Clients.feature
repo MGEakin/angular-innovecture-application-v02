@@ -38,3 +38,8 @@ Feature: Client CRUD
     When I click on a specific "Client"
 #    When I click on the REMOVE Client button
 #    Then the Client is no longer visible
+
+  Scenario: Client Region
+    Given I navigate to the "Client" Home page
+    When I click on a specific "Client"
+    Then I see the Region they belong in
