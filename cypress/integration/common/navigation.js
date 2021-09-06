@@ -10,7 +10,13 @@ Given('I navigate to the {string} Home page', (home_page) => {
 Given('I navigate to the Create {string} page', (entity) => {
   // const url = 'http://localhost:4200/dashboard'
   cy.visit(url);
-  cy.get(`#btn-${entity.toLowerCase()}-home`).click()
+  switch (entity){
+    case 'Opening':
+      cy.get(`#btn-client-home`).click()
+      break;
+    default:
+      cy.get(`#btn-${entity.toLowerCase()}-home`).click()
+  }
   cy.get(`#btn-${entity.toLowerCase()}-add`).click()
 })
 When( 'I click on a specific {string}', (entity) => {

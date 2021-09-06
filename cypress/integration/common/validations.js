@@ -24,6 +24,9 @@ Then('the {string} is created', (entity) => {
     case 'Status':
       newEntity = 'drunk'
       break;
+    case 'Opening':
+      newEntity = 'Agile Coach - OWG Team 1'
+      break;
     case 'Region':
       newEntity = 'South America'
       break;

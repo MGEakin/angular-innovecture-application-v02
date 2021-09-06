@@ -1,1 +1,8 @@
-<p>opening-detail works!</p>
+<div *ngIf="opening" id="opening-{{opening.id}}-home">
+  <h2>{{opening.title | uppercase}} Details</h2>
+  <div><span>id: </span>{{opening.id}}</div>
+  <div>
+    <label for="opening-title">Opening title: </label>
+    <input id="opening-title" [(ngModel)]="opening.title" placeholder="opening title"/><br>
+  </div>
+</div>

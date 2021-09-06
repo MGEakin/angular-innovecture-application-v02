@@ -32,6 +32,14 @@ import { UserAddFormComponent } from './user-add-form/user-add-form.component';
 import { UserPracticesComponent } from './user-practices/user-practices.component';
 import { UserRolesComponent } from './user-roles/user-roles.component';
 
+import { OpeningsComponent } from './openings/openings.component';
+import { OpeningDetailComponent } from './opening-detail/opening-detail.component';
+import { OpeningAddFormComponent } from './opening-add-form/opening-add-form.component';
+
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
+import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add-form.component';
+
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -64,6 +72,14 @@ const routes: Routes = [
 
   { path: 'userPractices', component: UserPracticesComponent },
   { path: 'userRoles', component: UserRolesComponent },
+
+  { path: 'openings', component: OpeningsComponent },
+  { path: 'openings/detail/:id', component: OpeningDetailComponent },
+  { path: 'opening/add', component: OpeningAddFormComponent },
+
+  { path: 'assignments', component: AssignmentsComponent },
+  { path: 'assignments/detail/:id', component: AssignmentDetailComponent },
+  { path: 'assignment/add', component: AssignmentAddFormComponent }
 ];
 
 @NgModule({

@@ -1,1 +1,8 @@
-<p>assignment-detail works!</p>
+<div *ngIf="assignment" id="assignment-{{assignment.id}}-home">
+  <h2>{{assignment.title | uppercase}} Details</h2>
+  <div><span>id: </span>{{assignment.id}}</div>
+  <div>
+    <label for="assignment-title">Assignment title: </label>
+    <input id="assignment-title" [(ngModel)]="assignment.title" placeholder="assignment title"/><br>
+  </div>
+</div>

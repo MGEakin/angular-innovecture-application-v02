@@ -2,7 +2,10 @@
 <ul class="openings">
   <li *ngFor="let opening of openings">
     <a routerLink="detail/{{opening.id}}">
-      <span class="badge">{{opening.id}}</span> {{opening.name}}
+      <span class="badge">{{opening.id}}</span> {{opening.title}}
     </a>
+  </li>
+  <li>
+    <a routerLink="/opening/add" id="btn-opening-add">Add Opening</a>
   </li>
 </ul>

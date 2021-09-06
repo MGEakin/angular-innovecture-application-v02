@@ -64,20 +64,20 @@ export class InMemoryDataService implements InMemoryDbService {
       { userId: 2, practiceId: 2 },
       { userId: 4, practiceId: 2 }
     ];
-    const opening = [
+    const openings = [
       { id: 1, title: 'MMC Agile Coach - Mercer', role: 3, openDate: '07/02/2022', closeDate: '09/30/2021', rate: 55 },
       { id: 2, title: 'MMC Agile Coach - OWG', role: 3, openDate: '08/02/2022', closeDate: '09/30/2021', rate: 55 },
       { id: 3, title: 'MMC ScrumMaster - Mercer', role: 4, openDate: '08/12/2022', closeDate: '09/30/2021', rate: 45 },
       { id: 4, title: 'MMC SDET - Mercer', role: 1, openDate: '08/22/2022', closeDate: '09/30/2021', rate: 35 }
     ];
-    const assignment = [
+    const assignments = [
       { id: 1, title: 'MMC Agile Coach - Mercer', role: 3, startDate: '07/02/2022', closeDate: '09/30/2021', rate: 55 },
       { id: 2, title: 'MMC Agile Coach - OWG', role: 3, startDate: '08/02/2022', closeDate: '09/30/2021', rate: 55 },
       { id: 3, title: 'MMC ScrumMaster - Mercer', role: 4, startDate: '08/12/2022', closeDate: '09/30/2021', rate: 45 },
       { id: 4, title: 'MMC SDET - Mercer', role: 1, startDate: '08/22/2022', closeDate: '09/30/2021', rate: 35 }
     ];
     return {clients, clientRegions, practices, regions, roles, statuses, users, userRoles, userPractices,
-      opening, assignment};
+      openings, assignments};
   }
 
   // Overrides the genId method to ensure that a role always has an id.

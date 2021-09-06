@@ -1,1 +1,87 @@
-<p>opening-add-form works!</p>
+<div class="container" id="add-new-opening">
+  <div [hidden]="submitted">
+    <h1>Add Opening Form</h1>
+    <form (ngSubmit)="onSubmit()" #openingForm="ngForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title"
+               required
+               [(ngModel)]="model.title" title="title"
+               #title="ngModel">
+        <div [hidden]="title.valid || title.pristine"
+             class="alert alert-danger">
+          Title is required
+        </div><br>
+        <label for="role">role</label>
+        <input type="text" class="form-control" id="role"
+               required
+               [(ngModel)]="model.role" role="role"
+               #role="ngModel">
+        <div [hidden]="role.valid || role.pristine"
+             class="alert alert-danger">
+          role is required
+        </div><br>
+        <label for="openDate">openDate</label>
+        <input type="text" class="form-control" id="openDate"
+               required
+               [(ngModel)]="model.openDate" openDate="openDate"
+               #openDate="ngModel">
+        <div [hidden]="openDate.valid || openDate.pristine"
+             class="alert alert-danger">
+          openDate is required
+        </div><br>
+        <label for="closeDate">closeDate</label>
+        <input type="text" class="form-control" id="closeDate"
+               required
+               [(ngModel)]="model.closeDate" closeDate="closeDate"
+               #closeDate="ngModel">
+        <div [hidden]="closeDate.valid || closeDate.pristine"
+             class="alert alert-danger">
+          closeDate is required
+        </div><br>
+        <label for="rate">rate</label>
+        <input type="text" class="form-control" id="rate"
+               required
+               [(ngModel)]="model.rate" rate="rate"
+               #rate="ngModel">
+        <div [hidden]="rate.valid || rate.pristine"
+             class="alert alert-danger">
+          rate is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" id="btn-submit" [disabled]="!openingForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newOpening(); openingForm.reset()">New Opening</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" id="display-new-opening">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Title</div>
+      <div class="col-xs-9">{{ model.title }}</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-3">Role</div>
+      <div class="col-xs-9">{{ model.role }}</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-3">Open Date</div>
+      <div class="col-xs-9">{{ model.openDate }}</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-3">Close Date</div>
+      <div class="col-xs-9">{{ model.closeDate }}</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-3">Role</div>
+      <div class="col-xs-9">{{ model.role }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>
