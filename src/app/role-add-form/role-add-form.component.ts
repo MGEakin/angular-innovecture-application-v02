@@ -11,13 +11,13 @@ export class RoleAddFormComponent {
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
-  model = new Role(10, '', '');
+  model = new Role();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newRole() {
-    this.model = new Role(42, '', '');
+    this.model = new Role();
   }
 }

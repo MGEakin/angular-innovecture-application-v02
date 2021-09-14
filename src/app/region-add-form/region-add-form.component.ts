@@ -11,13 +11,13 @@ export class RegionAddFormComponent {
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
-  model = new Region(10, '');
+  model = new Region();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newRegion() {
-    this.model = new Region(42, '');
+    this.model = new Region();
   }
 }

@@ -40,9 +40,17 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
 import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add-form.component';
 
+import { TutorialsListComponent } from './tutorials-list/tutorials-list.component';
+import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
+import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
+
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
+  { path: 'tutorials', component: TutorialsListComponent },
+  { path: 'tutorials/:id', component: TutorialDetailsComponent },
+  { path: 'add', component: AddTutorialComponent },
 
   { path: 'clients', component: ClientsComponent },
   { path: 'clients/detail/:id', component: ClientDetailComponent },

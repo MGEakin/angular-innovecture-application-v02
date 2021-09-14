@@ -20,7 +20,7 @@ export class AssignmentAddFormComponent {
   newCloseDate = new Date(2021, 9, 15);
   // model = new Assignment( 1, 'MMC Agile Coach - Mercer', 3, '2021-08-01', '2021-09-15', 55 );
 
-  model = new Assignment( 1, '', '', '', 0, 0, 0, 0 );
+  model = new Assignment();
 
   roles: Role[] = [];
   clients: Client[] = [];
@@ -56,6 +56,6 @@ export class AssignmentAddFormComponent {
   onSubmit() { this.submitted = true; }
 
   newAssignment() {
-    this.model = new Assignment( 1, 'MMC Agile Coach - Mercer', '2021-08-01', '2021-09-15', 55, 3, 1, 3 );
+    this.model = new Assignment();
   }
 }

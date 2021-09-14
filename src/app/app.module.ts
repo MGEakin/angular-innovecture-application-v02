@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +39,11 @@ import { AssignmentAddFormComponent } from './assignment-add-form/assignment-add
 import { PracticeUsersComponent } from './practice-users/practice-users.component';
 import { RolePracticesComponent } from './role-practices/role-practices.component';
 import { ClientRegionsComponent } from './client-regions/client-regions.component';
+import { ClientUsersComponent } from './client-users/client-users.component';
+import { RoleUsersComponent } from './role-users/role-users.component';
+import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
+import { TutorialsListComponent } from './tutorials-list/tutorials-list.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +78,12 @@ import { ClientRegionsComponent } from './client-regions/client-regions.componen
     AssignmentAddFormComponent,
     PracticeUsersComponent,
     RolePracticesComponent,
-    ClientRegionsComponent
+    ClientRegionsComponent,
+    ClientUsersComponent,
+    RoleUsersComponent,
+    AddTutorialComponent,
+    TutorialDetailsComponent,
+    TutorialsListComponent
   ],
   imports: [
     BrowserModule,
@@ -84,9 +94,9 @@ import { ClientRegionsComponent } from './client-regions/client-regions.componen
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   bootstrap: [ AppComponent ]
 })

@@ -11,13 +11,13 @@ export class PracticeAddFormComponent {
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
-  model = new Practice(10, '');
+  model = new Practice();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newPractice() {
-    this.model = new Practice(42, '');
+    this.model = new Practice();
   }
 }

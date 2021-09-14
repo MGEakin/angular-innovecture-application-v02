@@ -10,13 +10,13 @@ export class OpeningAddFormComponent {
   newStartDate = new Date(2021, 8, 1);
   newCloseDate = new Date(2021, 9, 15);
   // model = new Opening( 1, 'MMC Agile Coach - Mercer', 3, '2021-08-01', '2021-09-15', 55 );
-  model = new Opening( 1, '', '', '', 0, 0, 0 );
+  model = new Opening();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newOpening() {
-    this.model = new Opening( 1, 'MMC Agile Coach - Mercer', '2021-08-01', '2021-09-15', 55, 3, 1 );
+    this.model = new Opening();
   }
 }

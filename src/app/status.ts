@@ -1,6 +1,10 @@
+// export class Status {
+//   constructor(
+//     public id: number,
+//     public name: string
+//   ) { }
+// }
 export class Status {
-  constructor(
-    public id: number,
-    public name: string
-  ) { }
+  id?: number;
+  name?: string
 }

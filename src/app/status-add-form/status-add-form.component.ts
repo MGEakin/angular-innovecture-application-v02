@@ -11,13 +11,13 @@ export class StatusAddFormComponent {
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
-  model = new Status(10, '');
+  model = new Status();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newStatus() {
-    this.model = new Status(42, '');
+    this.model = new Status();
   }
 }

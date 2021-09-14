@@ -13,7 +13,7 @@ export class UserAddFormComponent {
 
   practices = ['SDET', 'Agile', 'Development', 'DevOps' ];
 
-  model = new User(42, '', '', '');
+  model = new User();
   // model = new User(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
   submitted = false;
@@ -21,6 +21,6 @@ export class UserAddFormComponent {
   onSubmit() { this.submitted = true; }
 
   newUser() {
-    this.model = new User(42, '', '');
+    this.model = new User();
   }
 }

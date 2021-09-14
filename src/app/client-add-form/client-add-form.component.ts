@@ -11,13 +11,13 @@ export class ClientAddFormComponent {
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
 
-  model = new Client(10, '');
+  model = new Client();
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newClient() {
-    this.model = new Client(42, '');
+    this.model = new Client();
   }
 }
